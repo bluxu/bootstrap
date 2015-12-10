@@ -4,10 +4,12 @@
 
 <template name="atTextInput">
   <div class="at-input form-group {{#if isValidating}}validating{{/if}} {{#if hasError}}has-error{{/if}} {{#if hasSuccess}}has-success{{/if}} {{#if feedback}}has-feedback{{/if}}">
-    <label class="control-label {{#unless showLabels}}sr-only{{/unless}}" for="at-field-{{_id}}">
+    <span class="control-label {{#unless showLabels}}sr-only{{/unless}} col-sm-4" for="at-field-{{_id}}">
       {{displayName}} {{#unless required}}{{optionalText}}{{/unless}}
-    </label>
-    <input type="{{type}}" class="form-control" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
+    </span>
+    <div class="col-sm-8">
+      <input type="{{type}}" class="form-control" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
+    </div>
     {{#if hasIcon}}
       <span class="{{iconClass}} form-control-feedback"></span>
     {{/if}}
@@ -38,6 +40,7 @@
 <template name="atRadioInput">
   <div class="at-input form-group">
     <label>{{displayName}}</label>
+    <div style="clear:both"></div>
     {{#each values}}
       <div class="at-input radio">
         <label for="at-field-{{id}}-choice-{{value}}">

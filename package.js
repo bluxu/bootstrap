@@ -1,8 +1,8 @@
 Package.describe({
-  summary: 'Accounts Templates styled for Twitter Bootstrap.',
-  version: '1.13.0',
-  name: 'useraccounts:bootstrap',
-  git: 'https://github.com/meteor-useraccounts/bootstrap.git',
+  summary: 'Accounts Templates styled for Twitter Bootstrap. Modified for collabor8.',
+  version: '1.13.2',
+  name: 'efhughes:collabor8-useraccounts-bootstrap',
+  git: '',
 });
 
 Package.on_use(function(api, where) {
@@ -69,7 +69,7 @@ Package.on_use(function(api, where) {
 
 Package.on_test(function(api) {
   api.use([
-    'useraccounts:bootstrap',
+    'efhughes:collabor8-useraccounts-bootstrap',
     'useraccounts:core@1.13.0',
   ]);
 
